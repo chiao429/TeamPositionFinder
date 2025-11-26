@@ -89,7 +89,7 @@ export default function Home() {
         {/* Header */}
         <div className="text-center space-y-0.5 md:space-y-1">
           <h1 className="text-xl md:text-3xl font-bold text-xmas-gold-200 tracking-tight drop-shadow-lg">
-            小隊查詢系統
+            國小小隊查詢
           </h1>
           <p className="text-xs md:text-sm text-xmas-gold-100">
             輸入小隊，快速查詢隊伍位置及隊長資訊
