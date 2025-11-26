@@ -108,7 +108,7 @@ export default function SeatMap({ highlightedSeats, onSeatClick }: SeatMapProps)
       <div className="mt-2 md:mt-3 flex justify-center gap-2 md:gap-4 text-xs md:text-sm">
         <div className="flex items-center gap-1 md:gap-1.5">
           <div className="w-3 h-3 md:w-4 md:h-4 bg-xmas-deepGreen-600/70 border border-xmas-gold-400/20 rounded-lg backdrop-blur-sm"></div>
-          <span className="text-xmas-gold-200 font-medium">一般小隊</span>
+          <span className="text-xmas-gold-200 font-medium">未選小隊</span>
         </div>
         <div className="flex items-center gap-1 md:gap-1.5">
           <div className="w-3 h-3 md:w-4 md:h-4 bg-xmas-deepRed-600/90 rounded-lg border-2 border-xmas-gold-400 shadow-lg shadow-xmas-gold-400/30"></div>

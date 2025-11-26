@@ -30,7 +30,7 @@ export default function SearchBar({ onSearch, onClear }: SearchBarProps) {
           pattern="[0-9]*"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="請輸入座位號碼..."
+          placeholder="請輸入小隊..."
           className="w-full px-6 py-4 pr-44 text-lg border-2 border-xmas-gold-400/30 rounded-2xl 
                      bg-xmas-deepGreen-600/80 backdrop-blur-sm text-white placeholder-xmas-gold-200/60
                      focus:outline-none focus:border-xmas-gold-400 focus:ring-4 focus:ring-xmas-gold-400/20

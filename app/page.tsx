@@ -92,7 +92,7 @@ export default function Home() {
             小隊查詢系統
           </h1>
           <p className="text-xs md:text-sm text-xmas-gold-100">
-            輸入座位號碼，快速查詢隊長資訊
+            輸入小隊，快速查詢隊伍位置及隊長資訊
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export default function Home() {
 
         {/* Footer */}
         <div className="text-center text-xs md:text-sm text-xmas-gold-200 pt-1 md:pt-2 px-2">
-          <p>⭐ 提示：輸入座位號碼(如「111」、「218」)或直接點擊小隊查詢隊長資訊</p>
+          <p>⭐ 提示：輸入小隊(如「111」、「218」)或直接點擊小隊查詢隊長資訊</p>
         </div>
       </div>
     </main>
