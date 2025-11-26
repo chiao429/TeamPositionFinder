@@ -56,20 +56,31 @@ export default function Home() {
   };
 
   const handleSeatClick = (seatId: string) => {
-    // 根據座位編號找到對應的小隊
-    const team = teamsData.find((t) => 
-      t.positions.some((pos) => pos.toLowerCase() === seatId.toLowerCase())
-    );
-
+    // 根據座位ID找到對應的小隊
+    const team = teamsData.find((t) => t.positions.includes(seatId));
+    
     if (team) {
-      setSelectedTeam(team);
-      setHighlightedSeats(team.positions);
-      setNotFound(false);
+      // 如果點擊的是已選中的小隊,則取消選中
+      if (selectedTeam?.team_name === team.team_name) {
+        setSelectedTeam(null);
+        setHighlightedSeats([]);
+        setNotFound(false);
+      } else {
+        setSelectedTeam(team);
+        setHighlightedSeats(team.positions);
+        setNotFound(false);
+      }
     } else {
       setSelectedTeam(null);
       setHighlightedSeats([]);
       setNotFound(false);
     }
+  };
+
+  const handleClear = () => {
+    setSelectedTeam(null);
+    setHighlightedSeats([]);
+    setNotFound(false);
   };
 
   return (
@@ -78,15 +89,15 @@ export default function Home() {
         {/* Header */}
         <div className="text-center space-y-0.5 md:space-y-1">
           <h1 className="text-xl md:text-3xl font-bold text-xmas-gold-200 tracking-tight drop-shadow-lg">
-            🎄 小隊查詢系統 🎄
+            小隊查詢系統
           </h1>
           <p className="text-xs md:text-sm text-xmas-gold-100">
-            輸入小隊編號，快速查詢隊長資訊
+            輸入座位號碼，快速查詢隊長資訊
           </p>
         </div>
 
         {/* Search Bar */}
-        <SearchBar onSearch={handleSearch} />
+        <SearchBar onSearch={handleSearch} onClear={handleClear} />
 
         {/* Team Info */}
         <TeamInfo team={selectedTeam} notFound={notFound} />
