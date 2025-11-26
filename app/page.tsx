@@ -96,7 +96,7 @@ export default function Home() {
 
         {/* Footer */}
         <div className="text-center text-xs md:text-sm text-xmas-gold-200 pt-1 md:pt-2 px-2">
-          <p>⭐ 提示：輸入小隊編號(如「111」或「S111」)或直接點擊小隊查詢隊長資訊</p>
+          <p>⭐ 提示：輸入座位號碼(如「111」、「218」)或直接點擊小隊查詢隊長資訊</p>
         </div>
       </div>
     </main>

@@ -70,14 +70,14 @@ export default function SeatMap({ highlightedSeats, onSeatClick }: SeatMapProps)
       
       <div className="space-y-1 md:space-y-1.5">
         {seatLayout.map((row, rowIndex) => (
-          <div key={rowIndex} className="flex justify-center gap-1 md:gap-2">
+          <div key={rowIndex} className="flex justify-center gap-2 md:gap-3">
             {row.map((seat) => {
               // 空座位不顯示
               if (!seat.id) {
                 return (
                   <div
                     key={`empty-${seat.row}-${seat.col}`}
-                    className="w-14 h-14 md:w-20 md:h-20"
+                    className="w-20 h-20 md:w-24 md:h-24"
                   />
                 );
               }
@@ -87,7 +87,7 @@ export default function SeatMap({ highlightedSeats, onSeatClick }: SeatMapProps)
                   key={seat.id}
                   onClick={() => onSeatClick?.(seat.id)}
                   className={`
-                    w-14 h-14 md:w-20 md:h-20 rounded-xl md:rounded-2xl flex flex-col items-center justify-center
+                    w-20 h-20 md:w-24 md:h-24 rounded-xl md:rounded-2xl flex flex-col items-center justify-center
                     transition-all duration-500 cursor-pointer backdrop-blur-sm
                     ${
                       isHighlighted(seat.id)
@@ -96,8 +96,8 @@ export default function SeatMap({ highlightedSeats, onSeatClick }: SeatMapProps)
                     }
                   `}
                 >
-                  <div className="text-[10px] md:text-xs font-medium opacity-70">小隊</div>
-                  <div className={`font-bold ${isHighlighted(seat.id) ? 'text-base md:text-xl text-xmas-gold-100' : 'text-xs md:text-base'}`}>{seat.label}</div>
+                  <div className="text-xs md:text-sm font-medium opacity-70">小隊</div>
+                  <div className={`font-bold ${isHighlighted(seat.id) ? 'text-lg md:text-2xl text-xmas-gold-100' : 'text-sm md:text-lg'}`}>{seat.label}</div>
                 </div>
               );
             })}

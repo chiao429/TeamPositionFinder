@@ -19,10 +19,12 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
     <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto">
       <div className="relative flex items-center">
         <input
-          type="text"
+          type="number"
+          inputMode="numeric"
+          pattern="[0-9]*"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="請輸入小隊編號..."
+          placeholder="請輸入座位號碼..."
           className="w-full px-6 py-4 pr-32 text-lg border-2 border-xmas-gold-400/30 rounded-2xl 
                      bg-xmas-deepGreen-600/80 backdrop-blur-sm text-white placeholder-xmas-gold-200/60
                      focus:outline-none focus:border-xmas-gold-400 focus:ring-4 focus:ring-xmas-gold-400/20
