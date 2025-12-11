@@ -1,12 +1,9 @@
 [
-  { "team_name": "D001", "positions": ["D001"], "leader": "陳怡君" },
-  { "team_name": "D002", "positions": ["D002"], "leader": "林冠宇" },
-  { "team_name": "D003", "positions": ["D003"], "leader": "張雅婷" },
-  { "team_name": "D004", "positions": ["D004"], "leader": "黃柏翰" },
-  { "team_name": "D005", "positions": ["D005"], "leader": "吳品萱" },
-  { "team_name": "D006", "positions": ["D006"], "leader": "劉宥廷" },
-  { "team_name": "D007", "positions": ["D007"], "leader": "王心瑜" },
-  { "team_name": "D008", "positions": ["D008"], "leader": "趙子軒" },
-  { "team_name": "D009", "positions": ["D009"], "leader": "許庭瑄" },
-  { "team_name": "D010", "positions": ["D010"], "leader": "高俊傑" }
+  { "team_name": "D001", "positions": ["D001"], "leader": "張妤瑄" },
+  { "team_name": "D002", "positions": ["D002"], "leader": "葛恩昀" },
+  { "team_name": "D003", "positions": ["D003"], "leader": "蕭琬尹" },
+  { "team_name": "D004", "positions": ["D004"], "leader": "顏汝" },
+  { "team_name": "D005", "positions": ["D005"], "leader": "梁慧嫺" },
+  { "team_name": "D006", "positions": ["D006"], "leader": "郭子嫣" },
+  { "team_name": "D007", "positions": ["D007"], "leader": "柯妤柔" }
 ]

@@ -11,50 +11,37 @@ interface SeatMapProps {
 export default function SeatMap({ highlightedSeats, onSeatClick }: SeatMapProps) {
   // 定義座位佈局 - 根據您的座位圖設計
   const seatLayout: SeatPosition[][] = [
-    // 第一排 (最下方)
+    // 第一排 (最下方)  S108 → S212 → S316 → S420 → S624
     [
-      { id: 'S111', row: 0, col: 0, label: 'S111' },
-      { id: 'S112', row: 0, col: 1, label: 'S112' },
-      { id: 'S113', row: 0, col: 2, label: 'S113' },
-      { id: 'S114', row: 0, col: 3, label: 'S114' },
-      { id: 'S115', row: 0, col: 4, label: 'S115' },
-      { id: 'S116', row: 0, col: 5, label: 'S116' },
+      { id: 'S108', row: 0, col: 0, label: 'S108' },
+      { id: 'S212', row: 0, col: 1, label: 'S212' },
+      { id: 'S316', row: 0, col: 2, label: 'S316' },
+      { id: 'S420', row: 0, col: 3, label: 'S420' },
+      { id: 'S624', row: 0, col: 4, label: 'S624' },
     ],
-    // 第二排
+    // 第二排          S109 → S213 → S317 → S421 → S625
     [
-      { id: 'S222', row: 1, col: 0, label: 'S222' },
-      { id: 'S221', row: 1, col: 1, label: 'S221' },
-      { id: 'S220', row: 1, col: 2, label: 'S220' },
-      { id: 'S219', row: 1, col: 3, label: 'S219' },
-      { id: 'S218', row: 1, col: 4, label: 'S218' },
-      { id: 'S117', row: 1, col: 5, label: 'S117' },
+      { id: 'S109', row: 1, col: 0, label: 'S109' },
+      { id: 'S213', row: 1, col: 1, label: 'S213' },
+      { id: 'S317', row: 1, col: 2, label: 'S317' },
+      { id: 'S421', row: 1, col: 3, label: 'S421' },
+      { id: 'S625', row: 1, col: 4, label: 'S625' },
     ],
-    // 第三排
+    // 第三排          S110 → S214 → S318 → S522 → 空
     [
-      { id: 'S223', row: 2, col: 0, label: 'S223' },
-      { id: 'S224', row: 2, col: 1, label: 'S224' },
-      { id: 'S325', row: 2, col: 2, label: 'S325' },
-      { id: 'S326', row: 2, col: 3, label: 'S326' },
-      { id: 'S327', row: 2, col: 4, label: 'S327' },
-      { id: 'S328', row: 2, col: 5, label: 'S328' },
+      { id: 'S110', row: 2, col: 0, label: 'S110' },
+      { id: 'S214', row: 2, col: 1, label: 'S214' },
+      { id: 'S318', row: 2, col: 2, label: 'S318' },
+      { id: 'S522', row: 2, col: 3, label: 'S522' },
+      { id: '', row: 2, col: 4, label: '' },
     ],
-    // 第四排
+    // 第四排 (最上方)  S111 → S215 → S419 → S523 → 空
     [
-      { id: 'S534', row: 3, col: 0, label: 'S534' },
-      { id: 'S533', row: 3, col: 1, label: 'S533' },
-      { id: 'S432', row: 3, col: 2, label: 'S432' },
-      { id: 'S431', row: 3, col: 3, label: 'S431' },
-      { id: 'S430', row: 3, col: 4, label: 'S430' },
-      { id: 'S429', row: 3, col: 5, label: 'S429' },
-    ],
-    // 第五排 (最上方)
-    [
-      { id: '', row: 4, col: 0, label: '' },
-      { id: '', row: 4, col: 1, label: '' },
-      { id: '', row: 4, col: 2, label: '' },
-      { id: 'S535', row: 4, col: 3, label: 'S535' },
-      { id: 'S636', row: 4, col: 4, label: 'S636' },
-      { id: 'S637', row: 4, col: 5, label: 'S637' },
+      { id: 'S111', row: 3, col: 0, label: 'S111' },
+      { id: 'S215', row: 3, col: 1, label: 'S215' },
+      { id: 'S419', row: 3, col: 2, label: 'S419' },
+      { id: 'S523', row: 3, col: 3, label: 'S523' },
+      { id: '', row: 3, col: 4, label: '' },
     ],
   ];
 
@@ -67,7 +54,7 @@ export default function SeatMap({ highlightedSeats, onSeatClick }: SeatMapProps)
           📍 報到桌 ↑
         </div>
       </div>
-      
+
       <div className="space-y-1 md:space-y-1.5">
         {seatLayout.map((row, rowIndex) => (
           <div key={rowIndex} className="flex justify-center gap-2 md:gap-3">

@@ -10,23 +10,23 @@ interface SeatMapProps {
 
 export default function PreschoolSeatMap({ highlightedSeats, onSeatClick }: SeatMapProps) {
   const seatLayout: SeatPosition[][] = [
+    // 第一排 (最下方)  D003 D002 D001
     [
-      { id: 'D009', row: 0, col: 0, label: 'D009' },
-      { id: 'D007', row: 0, col: 1, label: 'D007' },
-      { id: 'D008', row: 0, col: 2, label: 'D008' },
-      { id: 'D005', row: 0, col: 3, label: 'D005' },
+      { id: 'D003', row: 0, col: 0, label: 'D003' },
+      { id: 'D002', row: 0, col: 1, label: 'D002' },
+      { id: 'D001', row: 0, col: 2, label: 'D001' },
     ],
+    // 第二排             D004 D005 D006
     [
-      { id: 'D006', row: 1, col: 0, label: 'D006' },
-      { id: 'D010', row: 1, col: 1, label: 'D010' },
-      { id: 'D004', row: 1, col: 2, label: 'D004' },
-      { id: 'D003', row: 1, col: 3, label: 'D003' },
+      { id: 'D004', row: 1, col: 0, label: 'D004' },
+      { id: 'D005', row: 1, col: 1, label: 'D005' },
+      { id: 'D006', row: 1, col: 2, label: 'D006' },
     ],
+    // 第三排             _   _   D007
     [
       { id: '', row: 2, col: 0, label: '' },
       { id: '', row: 2, col: 1, label: '' },
-      { id: 'D001', row: 2, col: 2, label: 'D001' },
-      { id: 'D002', row: 2, col: 3, label: 'D002' },
+      { id: 'D007', row: 2, col: 2, label: 'D007' },
     ],
   ];
 
